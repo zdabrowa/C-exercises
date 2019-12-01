@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 	void funkcja(){
-		static int counter = 1;
+		static int counter = 0;
 		counter++;
 		printf("Wywolano mnie %d razy.\n", counter);
 	}
