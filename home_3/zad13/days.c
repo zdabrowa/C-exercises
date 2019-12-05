@@ -1,3 +1,5 @@
+#include "days.h"
+
 int is_leap(int y)
 {
     if (y % 4 == 0)
@@ -76,10 +78,13 @@ int calculate_days(int d, int m, int y) //calculates julian days from given date
     }
 }
 
-int daysdiff(int date1, int date2)
+int daysdiff(struct date date1, struct date date2)
 {
-    if (date1 - date2 < 0)
-        return ((date1 - date2) * (-1));
+    int days1 = calculate_days(date1.day, date1.month, date1.year);
+    int days2 = calculate_days(date2.day, date2.month, date2.year);
+
+    if (days1 - days2 < 0)
+        return ((days1 - days2) * (-1));
     else
-        return date1 - date2;
+        return days1 - days2;
 }
