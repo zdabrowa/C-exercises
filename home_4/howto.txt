@@ -1,0 +1,5 @@
+gcc -c -Wall bubble_sort.c -o bubble_sort.o
+gcc -c -Wall merge_sort.c -o merge_sort.o
+ar rcsv libsortint.a merge_sort.o bubble_sort.o   
+gcc -c -Wall zad16.c -o zad16.o
+gcc -o zad16 zad16.o -L. -lsortint
