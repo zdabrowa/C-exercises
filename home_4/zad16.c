@@ -5,7 +5,7 @@
 #include "sortint.h"
 
 #define BUBBLE "bubble"
-#define MERGE "bubble"
+#define MERGE "merge"
 
 void print_array(int *array, int len)
 {
@@ -30,15 +30,12 @@ int main(int argc, char *argv[])
 {
     int opt;
     extern char *optarg;
-    int *to_sort;
-    int length;
-
-    //int array[] = {1, 43, 25, -11, 6, 79, 0, -11, -1, 123, 121, 157, 11, 89, 9, 7, 4, 5, 6, 1};
-    // int length = sizeof(array) / sizeof(array[0]); //length of given array
+    int *to_sort; //array that will be sorted
+    int length; // given length of 'to_sort'
 
     if (argc == 1)
     {
-        print_instruction();
+        print_instruction(); //prints instruction if there are lacking parameters/arguments
         return 0;
     }
 
