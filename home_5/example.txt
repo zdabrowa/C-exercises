@@ -1,0 +1,10 @@
+This
+is 
+an
+example
+file
+it should contain
+
+
+
+10 lines!
